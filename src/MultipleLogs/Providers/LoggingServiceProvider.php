@@ -14,7 +14,7 @@ class LoggingServiceProvider extends ServiceProvider
 		$this->app->bind('audit_log', function($app) {
 			return new AuditLogger(
 				storage_path('logs/audit.log'),
-				'debug'
+				config('app.log_level', 'debug')
 			);
 		});
 
@@ -22,7 +22,7 @@ class LoggingServiceProvider extends ServiceProvider
 		$this->app->bind('auth_log', function($app) {
 			return new AuthenticationLogger(
 				storage_path('logs/auth.log'),
-				'debug'
+				config('app.log_level', 'debug')
 			);
 		});
 

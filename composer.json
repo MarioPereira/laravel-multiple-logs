@@ -17,6 +17,9 @@
         "classmap": [
             "src/MultipleLogs/"
         ],
+        "files": [
+            "src/MultipleLogs/helpers.php"
+        ],
         "psr-0": {
             "CSUNMetaLab\\MultipleLogs\\": "src/MultipleLogs/"
         }
