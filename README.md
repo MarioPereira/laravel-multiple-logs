@@ -44,9 +44,9 @@ Add the two facades for the new loggers to your `aliases` array in Laravel as fo
 
 ```
 'aliases' => [
-	//...
+    //...
 
-	'AuditLog' => CSUNMetaLab\MultipleLogs\Facades\AuditLog::class,
+    'AuditLog' => CSUNMetaLab\MultipleLogs\Facades\AuditLog::class,
     'AuthLog' => CSUNMetaLab\MultipleLogs\Facades\AuthLog::class,
 
     // You can also use the following depending on Laravel convention:
