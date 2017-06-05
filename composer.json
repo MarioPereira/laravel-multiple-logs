@@ -1,0 +1,24 @@
+{
+    "name": "csun-metalab/laravel-multiple-logs",
+    "description": "Composer package for Laravel 5 that adds a few additional log files as well as facades to write to them.",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Matthew Fritz",
+            "email": "mattf@burbankparanormal.com"
+        }
+    ],
+    "require": {
+        "php": ">=5.5.9"
+    },
+    "minimum-stability": "stable",
+    "autoload": {
+        "classmap": [
+            "src/MultipleLogs/"
+        ],
+        "psr-0": {
+            "CSUNMetaLab\\MultipleLogs\\": "src/MultipleLogs/"
+        }
+    }
+}
