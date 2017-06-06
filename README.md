@@ -73,7 +73,7 @@ This writes to a file called `audit.log` in your `storage/logs` directory.
 
 This supports all of the same methods the native `Log` facade does.
 
-The matching `auditLog()` helper method also supports them as instance methods.
+The matching `auditLogger()` helper method also supports them as instance methods.
 
 ### AuthLog
 
@@ -81,7 +81,7 @@ This writes to a file called `auth.log` in your `storage/logs` directory.
 
 This supports all of the same methods the native `Log` facade does.
 
-The matching `authLog()` helper method also supports them as instance methods.
+The matching `authLogger()` helper method also supports them as instance methods.
 
 ## Usage Examples
 
@@ -91,8 +91,8 @@ The matching `authLog()` helper method also supports them as instance methods.
 AuditLog::info("User performed some action");
 AuthLog::info("User authenticated successfully");
 
-auditLog()->info("User performed some action");
-authLog()->info("User authenticated successfully");
+auditLogger()->info("User performed some action");
+authLogger()->info("User authenticated successfully");
 ```
 
 ### Writing ERROR Data
@@ -101,8 +101,8 @@ authLog()->info("User authenticated successfully");
 AuditLog::error("User tried to perform an action unsuccessfully");
 AuthLog::error("User could not authenticate");
 
-auditLog()->error("User tried to perform an action unsuccessfully");
-authLog()->error("User could not authenticate");
+auditLogger()->error("User tried to perform an action unsuccessfully");
+authLogger()->error("User could not authenticate");
 ```
 
 ## Creating Custom File Loggers
