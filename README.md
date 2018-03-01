@@ -40,7 +40,7 @@ Next, add the service provider to your `providers` array in Laravel as follows:
 ],
 ```
 
-Add the two facades for the new loggers to your `aliases` array in Laravel as follows:
+Add the facades you need for the new loggers to your `aliases` array in Laravel as follows:
 
 ```
 'aliases' => [
@@ -48,10 +48,14 @@ Add the two facades for the new loggers to your `aliases` array in Laravel as fo
 
     'AuditLog' => CSUNMetaLab\MultipleLogs\Facades\AuditLog::class,
     'AuthLog' => CSUNMetaLab\MultipleLogs\Facades\AuthLog::class,
+    'DebugLog' => CSUNMetaLab\MultipleLogs\Facades\DebugLog::class,
+    
+    // ...
 
     // You can also use the following depending on Laravel convention:
     //'AuditLog' => 'CSUNMetaLab\MultipleLogs\Facades\AuditLog',
     //'AuthLog' => 'CSUNMetaLab\MultipleLogs\Facades\AuthLog',
+    //'DebugLog' => 'CSUNMetaLab\MultipleLogs\Facades\DebugLog',
 
     //...
 ],
@@ -65,7 +69,7 @@ php artisan vendor:publish
 
 ## Facades
 
-The two facades you added to your `config/app.php` file are the following:
+The facades you can to your `config/app.php` file are the following:
 
 ### AuditLog
 
@@ -82,6 +86,56 @@ This writes to a file called `auth.log` in your `storage/logs` directory.
 This supports all of the same methods the native `Log` facade does.
 
 The matching `authLogger()` helper method also supports them as instance methods.
+
+### DebugLog
+
+This writes to a file called `debug.log` in your `storage/logs` directory.
+
+This supports all of the same methods the native `Log` facade does.
+
+The matching `debugLogger()` helper method also supports them as instance methods.
+
+### EasypayLog
+
+This writes to a file called `easypay.log` in your `storage/logs` directory.
+
+This supports all of the same methods the native `Log` facade does.
+
+The matching `easypayLogger()` helper method also supports them as instance methods.
+
+### IfthenLog
+
+This writes to a file called `ifthen.log` in your `storage/logs` directory.
+
+This supports all of the same methods the native `Log` facade does.
+
+The matching `ifthenLogger()` helper method also supports them as instance methods.
+
+### PaymentsLog
+
+This writes to a file called `payments.log` in your `storage/logs` directory.
+
+This supports all of the same methods the native `Log` facade does.
+
+The matching `paymentsLogger()` helper method also supports them as instance methods.
+
+### PaypalLog
+
+This writes to a file called `paypal.log` in your `storage/logs` directory.
+
+This supports all of the same methods the native `Log` facade does.
+
+The matching `paypalLogger()` helper method also supports them as instance methods.
+
+### StripeLog
+
+This writes to a file called `stripe.log` in your `storage/logs` directory.
+
+This supports all of the same methods the native `Log` facade does.
+
+The matching `stripeLogger()` helper method also supports them as instance methods.
+
+
 
 ## Usage Examples
 
